@@ -1,0 +1,88 @@
+.banner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  align-content: center;
+  background-color: $color-orange;
+  height: 240px;
+
+  @media screen and (max-width: $breakpoint-md) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+		height: 320px;
+  }
+
+	@media screen and (max-width: $breakpoint-sm) {
+		height: 400px;
+	}
+
+  &__text {
+    grid-area: 1 / 1 / span 2 / 2;
+		@include flex (column, center);
+    justify-content: center;
+    gap: 1vh;
+  }
+
+  &__title {
+    font-size: $fs-32;
+    line-height: $lh-150-per;
+    font-weight: $fw-extraBold;
+
+		@media screen and (max-width: $breakpoint-md) {
+      padding-top: 9vh;
+    }
+		@media screen and (max-width: $breakpoint-ms) {
+			font-size: $fs-28;
+		}
+  }
+
+  &__subtitle {
+    font-size: $fs-32;
+    line-height: $lh-150-per;
+
+		@media screen and (max-width: $breakpoint-ms) {
+			font-size: $fs-28;
+		}
+  }
+
+  &__content {
+    grid-area: 1 / 2 / span 2 / 3;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2vw;
+
+    @media screen and (max-width: $breakpoint-md) {
+      grid-area: 3 / 1 / span 2 / 3;
+			gap: 10vw;
+    }
+
+		@media screen and (max-width: $breakpoint-sm) {
+      flex-direction: column;
+			gap: 5vw;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    text-transform: uppercase;
+    font-size: $fs-18;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    border: 1px solid $color-black;
+    border-radius: 5px;
+    padding: 8px 24px;
+		cursor: pointer;
+
+		@media screen and (max-width: $breakpoint-ms) {
+			font-size: $fs-16;
+		}
+  }
+
+  &__btn--filled {
+    color: $color-white;
+    background-color: $color-black;
+  }
+}

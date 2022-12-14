@@ -1,0 +1,68 @@
+.main {
+  display: flex;
+  background-color: $color-main;
+  @media screen and (max-width: $breakpoint-sm) {
+    flex-wrap: wrap;
+  }
+
+  &__content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    padding: 10%;
+    gap: 8%;
+    @media screen and (max-width: $breakpoint-sm) {
+      width: 100%;
+      height: 75vh;
+    }
+  }
+
+  &__photo {
+    width: 50%;
+    height: auto;
+
+    @media (max-width: $breakpoint-lg) {
+      height: auto;
+    }
+    @media screen and (max-width: $breakpoint-sm) {
+      width: auto;
+      align-self: center;
+    }
+  }
+
+  &__heading {
+    font-size: $fs-32;
+    line-height: 130%;
+  }
+
+  &__heading--lg {
+    font-size: $fs-56;
+    font-weight: $fw-semiBold;
+
+    @media (max-width: $breakpoint-xl) {
+      font-size: $fs-36;
+    }
+
+    @media (max-width: $breakpoint-lg) {
+      font-size: $fs-34;
+    }
+    @media (max-width: $breakpoint-md) {
+      font-size: $fs-30;
+    }
+  }
+
+  &__text {
+    font-size: $fs-20;
+    line-height: $lh-150-per;
+    font-weight: $fw-middle;
+
+    @media (max-width: $breakpoint-xl) {
+      font-size: $fs-18;
+    }
+    @media (max-width: $breakpoint-md) {
+      font-size: $fs-14;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.button {
+  @include main-button;
+
+  @media screen and (max-width: $breakpoint-sm) {
+    font-size: $fs-14;
+    padding: 5px 14px;
+  }
+
+  &--filled {
+    background-color: $color-orange;
+    color: $color-white;
+  }
+
+  &--flex-start {
+    align-self: flex-start;
+  }
+
+	&--header {
+		padding: 5px 24px;
+}
+}

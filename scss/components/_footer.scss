@@ -1,0 +1,46 @@
+.footer {
+  @include flex(column, center);
+  justify-content: center;
+	background-color: $color-white;
+	gap: 9.5vh;
+	padding-bottom: 5vh;
+
+	&__divider {
+		width: 60vw;
+		border-top: 1px solid $color-black;
+	}
+
+	&__terms {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 1.5vw;
+		font-size: $fs-14;
+		@media screen and (max-width: $breakpoint-sm) {
+      flex-direction: column;
+    }
+	}
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+	gap: 5vw;
+  font-size: $fs-14;
+  line-height: $lh-140-per;
+	font-weight: $fw-bold;
+	padding-top: 50px;
+
+  &__logo {
+    width: 41px;
+		margin-left: 3vw;
+		margin-right: 3vw;
+  }
+}
+
+.icons {
+	@include flex(row, center);
+	justify-content: center;
+	gap: 1.5vw;
+}

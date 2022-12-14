@@ -1,0 +1,25 @@
+@mixin flex ($direction, $align) {
+	display: flex;
+	flex-direction: $direction;
+	align-items: $align;
+}
+
+@mixin title {
+	text-align: center;
+	font-size: $fs-32;
+	line-height: $lh-38;
+	color: $color-black;
+	padding-bottom: 20px;
+}
+
+@mixin main-button {
+	border: 1px solid $color-orange;
+  border-radius: 5px;
+  color: $color-orange;
+  text-transform: uppercase;
+  padding: 10px 28px;
+  // height: 50px;
+  max-height: 100%;
+  max-width: 100%;
+	cursor: pointer;
+}

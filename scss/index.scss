@@ -1,0 +1,17 @@
+@import "utils/reset";
+@import "utils/variables";
+@import "utils/global";
+@import "utils/mixins";
+
+@import "fonts/fonts";
+
+
+@import "components/header";
+@import "components/button";
+@import "components/main";
+@import "components/menu";
+@import "components/posts";
+@import "components/card";
+@import "components/banner";
+@import "components/blog";
+@import "components/footer";
